@@ -23,14 +23,14 @@ public class Main : Control
         TransitionTransparency(GetNode<Control>("Play") ,GetNode<Control>("Main"), GetNode<Button>("Play/VBoxContainer/Button"));
     }
 
-    public void Controlls()
+    public void Controls()
     {
-        TransitionTransparency(GetNode<Control>("Controlls") ,GetNode<Control>("Main"), GetNode<Button>("Controlls/Back"));
+        TransitionTransparency(GetNode<Control>("Controls") ,GetNode<Control>("Main"), GetNode<Button>("Controls/Back"));
     }
 
     public void Back()
     {
-        TransitionTransparency(GetNode<Control>("Main") ,GetNode<Control>("Controlls"), GetNode<Button>("Main/VBoxContainer/Start"));
+        TransitionTransparency(GetNode<Control>("Main") ,GetNode<Control>("Controls"), GetNode<Button>("Main/VBoxContainer/Start"));
     }
     public void BackPlay()
     {
