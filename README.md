@@ -10,7 +10,7 @@
 
 ## Building
 BitKnight was made using [Godot 3.2 beta 5](https://godotengine.org/article/dev-snapshot-godot-3-2-beta-5) with the mono module but any 3.x version with mono should work.
-Check the [Packaging folder](packaging/README.md) for exporting and packaging the game
+Check the [Packaging folder](Packaging/README.md) for exporting and packaging the game
 
 ## Tools used
 [Godot](https://github.com/godotengine/godot)
