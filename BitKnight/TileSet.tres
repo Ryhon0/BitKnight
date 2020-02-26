@@ -1,0 +1,69 @@
+[gd_resource type="TileSet" load_steps=7 format=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+custom_solver_bias = 0.1
+extents = Vector2( 0.5, 0.5 )
+
+[sub_resource type="Gradient" id=2]
+offsets = PoolRealArray( 0.12, 0.936, 1 )
+colors = PoolColorArray( 0.262745, 0.321569, 0.239216, 1, 0.262745, 0.321569, 0.239216, 1, 0.262745, 0.321569, 0.239216, 1 )
+
+[sub_resource type="GradientTexture" id=3]
+gradient = SubResource( 2 )
+width = 1
+
+[sub_resource type="RectangleShape2D" id=4]
+custom_solver_bias = 0.1
+extents = Vector2( 0.5, 0.5 )
+
+[sub_resource type="Gradient" id=5]
+offsets = PoolRealArray( 0.12, 0.936, 1 )
+colors = PoolColorArray( 0.262745, 0.321569, 0.239216, 1, 0.262745, 0.321569, 0.239216, 1, 0.262745, 0.321569, 0.239216, 1 )
+
+[sub_resource type="GradientTexture" id=6]
+gradient = SubResource( 5 )
+width = 1
+
+[resource]
+0/name = "Ground"
+0/texture = SubResource( 3 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 1, 1 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0.5, 0.5 )
+0/navigation_offset = Vector2( 0.5, 0.5 )
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0.5, 0.5 )
+} ]
+0/z_index = 0
+1/name = "Platform"
+1/texture = SubResource( 3 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 0, 1, 1 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0.5, 0.5 )
+1/navigation_offset = Vector2( 0.5, 0.5 )
+1/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": true,
+"one_way_margin": 1.0,
+"shape": SubResource( 4 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0.5, 0.5 )
+} ]
+1/z_index = 0
+2/name = "Paint"
+2/texture = SubResource( 6 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 0, 0, 1, 1 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0.5, 0.5 )
+2/navigation_offset = Vector2( 0.5, 0.5 )
+2/shapes = [  ]
+2/z_index = 0

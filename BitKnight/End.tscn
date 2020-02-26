@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://end.png" type="Texture" id=1]
+[ext_resource path="res://End.cs" type="Script" id=2]
+
+[sub_resource type="Animation" id=1]
+resource_name = "Cutscene"
+length = 6.0
+step = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2, 2.999, 3, 3.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 13, 0, 0, 14, 15 ]
+}
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Cutscene = SubResource( 1 )
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+centered = false
+hframes = 16
+[connection signal="animation_finished" from="AnimationPlayer" to="AnimationPlayer" method="Finish"]

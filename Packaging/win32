@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# Export project
+$GODOT ../BitKnight/project.godot --export "Win32" BitKnight32.exe
+
+mv ../BitKnight/BitKnight32.exe Packages/

@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Export project
+$GODOT ../BitKnight/project.godot --export "Linux-x86_64" BitKnight
+
+# Clear AppDir
+rm -rf ./AppImage/AppDir/usr/bin/*
+rm -rf ./AppImage/AppDir/usr/share/icons/*
+rm -rf ./AppImage/AppDir/BitKnightIcon.png
+
+# Set up AppImage
+mv ../BitKnight/BitKnight ./AppImage/AppDir/usr/bin/BitKnight
+cp ../BitKnight/icon.png ./AppImage/AppDir/BitKnightIcon.png
+cp ../BitKnight/icon.png ./AppImage/AppDir/usr/share/icons/BitKnightIcon.png
+
+cd AppImage
+./Build-x86_64
+cd ..

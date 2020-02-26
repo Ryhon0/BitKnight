@@ -1,0 +1,192 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Theme.tres" type="Theme" id=1]
+[ext_resource path="res://Main.cs" type="Script" id=2]
+[ext_resource path="res://Dither.tres" type="Material" id=3]
+
+[node name="Control" type="Control"]
+margin_right = 84.0
+margin_bottom = 48.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Main" type="ColorRect" parent="."]
+margin_left = 0.434685
+margin_top = 0.28479
+margin_right = 84.4347
+margin_bottom = 48.2848
+theme = ExtResource( 1 )
+color = Color( 0.780392, 0.941176, 0.847059, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Main"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -3.0
+margin_right = -1.52588e-05
+margin_bottom = -35.0
+text = "BIT KNIGHT"
+align = 1
+valign = 1
+autowrap = true
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Main"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 16.0
+margin_top = 8.0
+margin_right = -16.0
+margin_bottom = -2.00001
+theme = ExtResource( 1 )
+custom_constants/separation = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Start" type="Button" parent="Main/VBoxContainer"]
+margin_right = 52.0
+margin_bottom = 12.0
+rect_min_size = Vector2( 0, 12 )
+text = "START"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Start2" type="Button" parent="Main/VBoxContainer"]
+margin_top = 13.0
+margin_right = 52.0
+margin_bottom = 25.0
+rect_min_size = Vector2( 0, 12 )
+text = "CONTROLLS"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Start3" type="Button" parent="Main/VBoxContainer"]
+margin_top = 26.0
+margin_right = 52.0
+margin_bottom = 38.0
+rect_min_size = Vector2( 0, 12 )
+text = "EXIT"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Controlls" type="ColorRect" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -0.225937
+margin_bottom = -0.225937
+theme = ExtResource( 1 )
+color = Color( 0.780392, 0.941176, 0.847059, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Controlls"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 3.0
+margin_bottom = -8.0
+text = "Arrows-move
+z-attack
+x-shield
+enter-use
+"
+align = 1
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Back" type="Button" parent="Controlls"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = 35.2259
+margin_right = -8.0
+margin_bottom = -0.774063
+text = "GO BACK"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Play" type="ColorRect" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+color = Color( 0.780392, 0.941176, 0.847059, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Play"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 16.0
+margin_right = -16.0
+custom_constants/separation = 1
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="Play/VBoxContainer"]
+margin_top = 5.0
+margin_right = 52.0
+margin_bottom = 17.0
+rect_min_size = Vector2( 0, 12 )
+custom_constants/hseparation = 1
+text = "STORY MODE"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button3" type="Button" parent="Play/VBoxContainer"]
+margin_top = 31.0
+margin_right = 52.0
+margin_bottom = 43.0
+rect_min_size = Vector2( 0, 12 )
+custom_constants/hseparation = 1
+text = "GO BACK"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Transition" type="ColorRect" parent="."]
+light_mask = 0
+material = ExtResource( 3 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color( 0.780392, 0.941176, 0.847059, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TransparencyTween" type="Tween" parent="."]
+
+[node name="TransparencyTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="LoadLevelTimer" type="Timer" parent="."]
+wait_time = 0.001
+one_shot = true
+[connection signal="pressed" from="Main/VBoxContainer/Start" to="." method="Start"]
+[connection signal="pressed" from="Main/VBoxContainer/Start2" to="." method="Controlls"]
+[connection signal="pressed" from="Main/VBoxContainer/Start3" to="." method="Exit"]
+[connection signal="pressed" from="Controlls/Back" to="." method="Back"]
+[connection signal="pressed" from="Play/VBoxContainer/Button" to="." method="StoryMode"]
+[connection signal="pressed" from="Play/VBoxContainer/Button3" to="." method="BackPlay"]
+[connection signal="timeout" from="TransparencyTimer" to="." method="TransparencyTimer"]
+[connection signal="timeout" from="LoadLevelTimer" to="." method="LoadLevelTimedOut"]

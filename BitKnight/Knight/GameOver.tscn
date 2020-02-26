@@ -1,0 +1,71 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Theme.tres" type="Theme" id=1]
+[ext_resource path="res://Dither.tres" type="Material" id=2]
+[ext_resource path="res://Knight/GameOver.cs" type="Script" id=3]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource( 3 )
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="UI" type="ColorRect" parent="."]
+material = ExtResource( 2 )
+margin_right = 84.0
+margin_bottom = 48.0
+theme = ExtResource( 1 )
+color = Color( 0.262745, 0.321569, 0.239216, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="Control" parent="UI"]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Content" type="Label" parent="UI/Control"]
+margin_right = 84.0
+margin_bottom = 28.0
+custom_colors/font_color = Color( 0.780392, 0.941176, 0.847059, 1 )
+text = "GAME OVER"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/Control"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 64.0
+margin_bottom = 48.0
+custom_constants/separation = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="UI/Control/VBoxContainer"]
+margin_right = 44.0
+margin_bottom = 11.0
+rect_min_size = Vector2( 0, 11 )
+text = "RETRY"
+
+[node name="Button2" type="Button" parent="UI/Control/VBoxContainer"]
+margin_top = 12.0
+margin_right = 44.0
+margin_bottom = 23.0
+rect_min_size = Vector2( 0, 11 )
+custom_constants/hseparation = 1
+text = "MENU"
+
+[node name="Show" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+autostart = true
+[connection signal="pressed" from="UI/Control/VBoxContainer/Button" to="." method="Retry"]
+[connection signal="pressed" from="UI/Control/VBoxContainer/Button2" to="." method="Menu"]
+[connection signal="timeout" from="Show" to="." method="Show"]

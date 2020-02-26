@@ -1,0 +1,89 @@
+[gd_resource type="Theme" load_steps=13 format=2]
+
+[ext_resource path="res://UI/disabled.png" type="Texture" id=1]
+[ext_resource path="res://UI/button.png" type="Texture" id=2]
+[ext_resource path="res://UI/checkbox_checked.png" type="Texture" id=3]
+[ext_resource path="res://UI/checkbox.png" type="Texture" id=4]
+[ext_resource path="res://Fonts/Gizmo199.tres" type="BitmapFont" id=5]
+[ext_resource path="res://UI/select.png" type="Texture" id=6]
+
+[sub_resource type="StyleBoxTexture" id=1]
+texture = ExtResource( 1 )
+region_rect = Rect2( 0, 0, 2, 2 )
+margin_left = 2.0
+margin_right = 2.0
+margin_top = 2.0
+margin_bottom = 2.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+draw_center = false
+
+[sub_resource type="StyleBoxTexture" id=2]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 12, 12 )
+margin_left = 8.0
+expand_margin_left = 8.0
+draw_center = false
+
+[sub_resource type="StyleBoxTexture" id=3]
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 1, 1 )
+margin_left = 1.0
+margin_right = 1.0
+margin_top = 1.0
+margin_bottom = 1.0
+
+[sub_resource type="StyleBoxTexture" id=4]
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 3, 3 )
+margin_left = 1.0
+margin_right = 1.0
+margin_top = 1.0
+margin_bottom = 1.0
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.780392, 0.941176, 0.847059, 1 )
+
+[resource]
+default_font = ExtResource( 5 )
+Button/colors/font_color = Color( 0.262745, 0.321569, 0.239216, 1 )
+Button/colors/font_color_disabled = Color( 0.262745, 0.321569, 0.239216, 1 )
+Button/colors/font_color_hover = Color( 0.780392, 0.941176, 0.847059, 1 )
+Button/colors/font_color_pressed = Color( 0.780392, 0.941176, 0.847059, 1 )
+Button/constants/hseparation = 0
+Button/fonts/font = null
+Button/styles/disabled = SubResource( 1 )
+Button/styles/focus = SubResource( 2 )
+Button/styles/hover = SubResource( 3 )
+Button/styles/normal = SubResource( 4 )
+Button/styles/pressed = SubResource( 3 )
+CheckBox/colors/font_color = Color( 0.262745, 0.321569, 0.239216, 1 )
+CheckBox/colors/font_color_disabled = Color( 0.262745, 0.321569, 0.239216, 1 )
+CheckBox/colors/font_color_hover = Color( 0.262745, 0.321569, 0.239216, 1 )
+CheckBox/colors/font_color_hover_pressed = Color( 0.262745, 0.321569, 0.239216, 1 )
+CheckBox/colors/font_color_pressed = Color( 0.262745, 0.321569, 0.239216, 1 )
+CheckBox/constants/check_vadjust = 0
+CheckBox/constants/hseparation = 4
+CheckBox/fonts/font = null
+CheckBox/icons/checked = ExtResource( 3 )
+CheckBox/icons/radio_checked = ExtResource( 3 )
+CheckBox/icons/radio_unchecked = ExtResource( 4 )
+CheckBox/icons/unchecked = ExtResource( 4 )
+CheckBox/styles/disabled = null
+CheckBox/styles/focus = null
+CheckBox/styles/hover = null
+CheckBox/styles/hover_pressed = null
+CheckBox/styles/normal = null
+CheckBox/styles/pressed = null
+Label/colors/font_color = Color( 0.262745, 0.321569, 0.239216, 1 )
+Label/constants/line_spacing = 3
+Label/fonts/font = ExtResource( 5 )
+Label/styles/normal = null
+ProgressBar/colors/font_color = Color( 0.262745, 0.321569, 0.239216, 0 )
+ProgressBar/colors/font_color_shadow = Color( 0, 0, 0, 0 )
+ProgressBar/fonts/font = null
+ProgressBar/styles/bg = SubResource( 5 )
+ProgressBar/styles/fg = SubResource( 6 )

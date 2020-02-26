@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# Export project
+$GODOT ../BitKnight/project.godot --export "OSX" BitKnight.app
+
+mv ../BitKnight/BitKnight.app Packages/OSX/BitKnight.app

@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# Export project
+$GODOT ../BitKnight/project.godot --export "HTML5" BitKnightHTML.html
+
+mv ../BitKnight/BitKnightHTML* Packages/HTML/

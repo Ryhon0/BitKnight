@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=BitKnight
+Comment=Made with Godot
+Exec=BitKnight
+Icon=BitKnightIcon
+Type=Application
+Terminal=false
+Categories=Game;

@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Linux (AppImage)
+./linux32 # x86
+./linux64 # x86_64
+
+# Windows (.rar archive)
+./win32 # 32-bit Windows
+./win64 # 64-bit Windows
+
+# OSX
+./osx
+
+# HTML
+./html
+
+

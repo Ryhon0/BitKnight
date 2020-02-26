@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Download appimagetool
+wget "https://github.com/AppImage/AppImageKit/releases/download/continuous/appimagetool-x86_64.AppImage" -O"appimagetool.AppImage"
+chmod a+x appimagetool.AppImage
+
+# Make AppImage
+ARCH=i386 ./appimagetool.AppImage ./AppDir/
+
+mv BitKnight-i386.AppImage ../Packages
