@@ -3,12 +3,16 @@
 Open Disk Utility
 
 ![](https://raw.githubusercontent.com/Ryhon0/BitKnight/master/Packaging/OSX%20Screenshots/1.png)
+
 Create a new blank image
 ![](https://raw.githubusercontent.com/Ryhon0/BitKnight/master/Packaging/OSX%20Screenshots/2.png)
+
 Name the image BitKnight Installer
 ![](https://raw.githubusercontent.com/Ryhon0/BitKnight/master/Packaging/OSX%20Screenshots/3.png)
+
 Mount the image and open folder view options
 ![](https://raw.githubusercontent.com/Ryhon0/BitKnight/master/Packaging/OSX%20Screenshots/4.png)
+
 Show hidden files (Command+Shift+Dot)
 Copy the files from Packaging/Packages/OSX
 Set the background image to .background.png
