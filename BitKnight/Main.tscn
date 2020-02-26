@@ -65,7 +65,7 @@ margin_top = 13.0
 margin_right = 52.0
 margin_bottom = 25.0
 rect_min_size = Vector2( 0, 12 )
-text = "CONTROLLS"
+text = "CONTROLS"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -80,7 +80,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Controlls" type="ColorRect" parent="."]
+[node name="Controls" type="ColorRect" parent="."]
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -92,7 +92,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="Controlls"]
+[node name="Label" type="Label" parent="Controls"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = 3.0
@@ -108,7 +108,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Back" type="Button" parent="Controlls"]
+[node name="Back" type="Button" parent="Controls"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 8.0
@@ -185,7 +185,7 @@ one_shot = true
 [connection signal="pressed" from="Main/VBoxContainer/Start" to="." method="Start"]
 [connection signal="pressed" from="Main/VBoxContainer/Start2" to="." method="Controlls"]
 [connection signal="pressed" from="Main/VBoxContainer/Start3" to="." method="Exit"]
-[connection signal="pressed" from="Controlls/Back" to="." method="Back"]
+[connection signal="pressed" from="Controls/Back" to="." method="Back"]
 [connection signal="pressed" from="Play/VBoxContainer/Button" to="." method="StoryMode"]
 [connection signal="pressed" from="Play/VBoxContainer/Button3" to="." method="BackPlay"]
 [connection signal="timeout" from="TransparencyTimer" to="." method="TransparencyTimer"]
